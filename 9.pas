@@ -1,26 +1,11 @@
-﻿var
-str1, str2: string;
-difference: integer; // переменная для хранения разницы в длине строк
-i: integer;
+var
+  s, d: string;
 
 begin
-write('Введите первую строку: ');
-readln(str1); 
-
-write('Введите вторую строку: ');
-readln(str2); 
-
-difference := abs(length(str1) - length(str2)); // вычисляем разницу в длине строк
-
-// проверяем, какая строка длиннее и выводим ее разницу раз
-if length(str1) > length(str2) then
-begin
-for i := 1 to difference do
-writeln(str1);
-end
-else if length(str2) > length(str1) then
-begin
-for i := 1 to difference do
-writeln(str2);
-end;
+  writeln('первая строка: ');
+  readln(s);
+  writeln('вторая строка: ');
+  readln(d);
+  if Length(s) > Length(d) then write(s*(Length(s)-Length(d)))
+  else write(d*(Length(d)-Length(s)))
 end.
